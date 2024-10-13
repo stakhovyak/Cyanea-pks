@@ -1,0 +1,24 @@
+services:
+  cyanea:
+    container_name: cyanea
+    hostname: cyanea
+    build:
+      context: .
+    ports:
+      - 8080:8080
+
+  valkey:
+    container_name: valkey
+    hostname: valkey
+    image: valkey/valkey:7.2.6
+    volumes:
+      - ./conf/valkey.conf:/etc/valkey/valkey.conf
+      - ./data:/data
+    command: valkey-server /etc/valkey/valkey.conf
+    healthcheck:
+      test: [ "CMD-SHELL", "redis-cli ping | grep PONG" ]
+      interval: 1s
+      timeout: 3s
+      retries: 5
+    ports:
+      - 6379:6379

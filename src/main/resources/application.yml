@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cyanea
+
+  datasource:
+    url: jdbc:h2:mem:cyaneadb
+    username: cyanea
+    password: 123
+    driverClassName: ort.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console.enabled: true
+    console:
+      path: /h2-console
+      settings.trace: true
+      settings.web-allow-others: true
