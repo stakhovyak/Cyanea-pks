@@ -1,8 +1,7 @@
 package com.weuoimi.cyanea.factory;
 
-import com.weuoimi.cyanea.NoteBuilderParams;
-import com.weuoimi.cyanea.NoteCreators;
-import com.weuoimi.cyanea.Noteable;
+import com.weuoimi.cyanea.params.NoteBuilderParams;
+import com.weuoimi.cyanea.entity.Noteable;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

@@ -1,7 +1,6 @@
-package com.weuoimi.cyanea;
+package com.weuoimi.cyanea.params;
 
 import com.weuoimi.cyanea.entity.Group;
-import com.weuoimi.cyanea.factory.NoteType;
 import lombok.Builder;
 import lombok.Data;
 
@@ -17,8 +16,6 @@ public class NoteBuilderParams {
 
     private final Supplier<File> filePath;
 
-    private final Supplier<NoteType> noteType;
-
     private final Supplier<Optional<Group>> group;
 
     public String getTitle() {
@@ -27,10 +24,6 @@ public class NoteBuilderParams {
 
     public File getFilePath() {
         return filePath.get();
-    }
-
-    public NoteType getNoteType() {
-        return noteType.get();
     }
 
     public Optional<Group> getGroup() {

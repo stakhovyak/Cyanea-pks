@@ -1,14 +1,17 @@
 package com.weuoimi.cyanea.parsers;
 
-import com.weuoimi.cyanea.Noteable;
-import com.weuoimi.cyanea.entity.Note;
-
 import java.io.File;
 
 public class OrgParser implements Parser {
     @Override
-    public Noteable parse(File file) {
+    public String parseTitle(File file) {
         // TODO: placeholder method!
-        return new Note();
+        return "";
+    }
+
+    @Override
+    public String parseContents(File file) {
+        // TODO: placeholder method!
+        return "";
     }
 }
